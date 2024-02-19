@@ -14,22 +14,14 @@ const App = () => {
 
   return (
     <div>
-      {/* <Card style={{ width: '18rem', fontFamily:'cursive', color:'blue'}}>
-        <Card.Body>
-          <Name name={product.name} />
-          <Price price={product.price} />
-          <Description description={product.description} />
-          <Image image={product.image} />
-        </Card.Body>
-      </Card> */}
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={product.image} />
+      <Image image={product.image} />
       <Card.Body>
-        <Card.Title>{product.name}</Card.Title>
+        <Card.Title><Name name={product.name} /></Card.Title>
         <Card.Text>
-        {product.description}
+        <Description description={product.description} />
         </Card.Text>
-        <Button variant="primary">{product.price} DTN</Button>
+        <Button variant="primary"><Price price={product.price} /> DTN</Button>
       </Card.Body>
     </Card>
       <p>Hello, {firstName ? firstName : "there"}!</p>
